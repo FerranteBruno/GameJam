@@ -1,0 +1,440 @@
+fileFormatVersion: 2
+guid: 38ae5cdb659d6484d84f56941106eb4a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1443884868232396572
+    second: SaltoConArma 1_0
+  - first:
+      213: 2356298852105341773
+    second: SaltoConArma 1_1
+  - first:
+      213: 3673720682088006741
+    second: SaltoConArma 1_2
+  - first:
+      213: 6120429720749148568
+    second: SaltoConArma 1_3
+  - first:
+      213: 1269785550659621871
+    second: SaltoConArma 1_4
+  - first:
+      213: -8031530109991438083
+    second: SaltoConArma 1_5
+  - first:
+      213: 6269829669088811745
+    second: SaltoConArma 1_6
+  - first:
+      213: 6426933392945531018
+    second: SaltoConArma 1_7
+  - first:
+      213: 2777079813790956102
+    second: SaltoConArma 1_8
+  - first:
+      213: -5402063679548302178
+    second: SaltoConArma 1_9
+  - first:
+      213: -2754812764296714568
+    second: SaltoConArma 1_10
+  - first:
+      213: 1865859530595121154
+    second: SaltoConArma 1_11
+  - first:
+      213: -185661759021349921
+    second: SaltoConArma 1_12
+  - first:
+      213: -1457100862778202630
+    second: SaltoConArma 1_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SaltoConArma 1_0
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 0
+        width: 622
+        height: 603
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e04274cc5a46fbe0800000000000000
+      internalID: -1443884868232396572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_1
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 0
+        width: 615
+        height: 589
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b4660625143b020800000000000000
+      internalID: 2356298852105341773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_2
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 0
+        width: 574
+        height: 685
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5548cd30f7dabf230800000000000000
+      internalID: 3673720682088006741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_3
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 0
+        width: 547
+        height: 699
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8990ff1576220f450800000000000000
+      internalID: 6120429720749148568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_4
+      rect:
+        serializedVersion: 2
+        x: 4231
+        y: 0
+        width: 718
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe39dff0b3f2f9110800000000000000
+      internalID: 1269785550659621871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_5
+      rect:
+        serializedVersion: 2
+        x: 5161
+        y: 0
+        width: 786
+        height: 603
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df83b17fae54a8090800000000000000
+      internalID: -8031530109991438083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_6
+      rect:
+        serializedVersion: 2
+        x: 6146
+        y: 0
+        width: 806
+        height: 603
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea5e347dd8e20750800000000000000
+      internalID: 6269829669088811745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_7
+      rect:
+        serializedVersion: 2
+        x: 7123
+        y: 0
+        width: 834
+        height: 603
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a884d999edd013950800000000000000
+      internalID: 6426933392945531018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_8
+      rect:
+        serializedVersion: 2
+        x: 8121
+        y: 0
+        width: 820
+        height: 603
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64afae5806b2a8620800000000000000
+      internalID: 2777079813790956102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_9
+      rect:
+        serializedVersion: 2
+        x: 9188
+        y: 0
+        width: 779
+        height: 603
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cdb7e64b30805b0800000000000000
+      internalID: -5402063679548302178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_10
+      rect:
+        serializedVersion: 2
+        x: 10151
+        y: 0
+        width: 814
+        height: 603
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6e161f260f4c9d0800000000000000
+      internalID: -2754812764296714568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_11
+      rect:
+        serializedVersion: 2
+        x: 11197
+        y: 0
+        width: 752
+        height: 596
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20836e97b5dd4e910800000000000000
+      internalID: 1865859530595121154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_12
+      rect:
+        serializedVersion: 2
+        x: 12243
+        y: 0
+        width: 732
+        height: 527
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd388252d956c6df0800000000000000
+      internalID: -185661759021349921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SaltoConArma 1_13
+      rect:
+        serializedVersion: 2
+        x: 13262
+        y: 0
+        width: 663
+        height: 596
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5a0304c7657cbe0800000000000000
+      internalID: -1457100862778202630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
