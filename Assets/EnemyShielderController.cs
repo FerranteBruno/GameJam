@@ -37,11 +37,21 @@ public class EnemyShielderController : MonoBehaviour
             //Debug.Log("porquenofuinciona?");
             anim.SetBool("Atak", true);
             //anim.SetBool("Atak", Atak);
+            float yOffset = 0.4f;
+            if(transform.position.y + yOffset < col.transform.position.y)
+            {
+                col.SendMessage("EnemyJump");
+            }
+            else
+            {
+                col.SendMessage("EnemyKnockBack",transform.position.x);
+            }
+
 
         }
         else
         {
-            Atak = false;
+            anim.SetBool("Atak", false);
         }
     }
 }

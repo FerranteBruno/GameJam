@@ -20,9 +20,20 @@ public class HurtEnemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.tag == "Enemy" )
+
+        {
+            
+            col.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
+        }
+    }
+
+    /*void OnCollisionEnter2D(Collision2D col)
+    {
+
         if (col.gameObject.tag == "Enemy")
         {
             col.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
         }
-    }
+    }*/
 }

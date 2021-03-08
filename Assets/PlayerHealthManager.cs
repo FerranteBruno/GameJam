@@ -20,7 +20,8 @@ public class PlayerHealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerCurrentHealth <= 0)
+        BarraVida.SendMessage("TakeDamage", playerCurrentHealth);
+        if (playerCurrentHealth <= 0)
         {
             gameObject.SetActive(false);
         }

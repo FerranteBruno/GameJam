@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 2f;
-    public float maxSpeed = 5f;
+    public float speed;
+    public float maxSpeed;
     private Rigidbody2D rb2d;
     private Animator anim;
     public bool grounded;
     public float jumpPower = 20f;
     private bool Jump;
+    private bool doubleJump;
+    private bool movement = true;
     public bool Ataque;
     public bool Activo;
     public int level=1;
     public AudioSource walkFx;
+    private SpriteRenderer spr;
 
     public bool getJump { get => Jump; set => Jump = value; }
 
@@ -23,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        spr = GetComponent<SpriteRenderer>();
         Activo = false;
         anim.SetBool("Waiting", true);
     }
@@ -33,9 +37,23 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Velocidad", Mathf.Abs(rb2d.velocity.x));
         anim.SetBool("Ground", grounded);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && grounded == true)
+        if (grounded)
         {
-            Jump = true;
+            doubleJump = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            
+            if (grounded)
+            {
+                Jump = true;
+                doubleJump = true;
+            }else if (doubleJump)
+            {
+                Jump = true;
+                doubleJump = false;
+            }
         }
         
         if (Input.GetKeyDown(KeyCode.T))
@@ -69,6 +87,8 @@ public class PlayerController : MonoBehaviour
 
             float h = Input.GetAxis("Horizontal");
 
+            if (!movement) h = 0;
+
             walkFx.Play();
 
             rb2d.AddForce(Vector2.right * speed * h);
@@ -92,6 +112,31 @@ public class PlayerController : MonoBehaviour
         }
         Debug.Log(rb2d.velocity.x);
     }
+    public void EnemyJump(float enemyPosX)
+    {
+        Jump = true;
+        movement = false;
+        Invoke("EnableMovement", 0.5f);
+        spr.color = Color.red;
+    }
+
+
+    public void EnemyKnockBack(float enemyPosX)
+    {
+        Jump = true;
+
+        float side = Mathf.Sign(enemyPosX - transform.position.x);
+        rb2d.AddForce(Vector2.left * side * jumpPower, ForceMode2D.Impulse);
+
+        movement = false;
+        Invoke("EnableMovement", 0.5f);
+        spr.color = Color.red;
+    }
     
+    void EnableMovement()
+    {
+        movement = true;
+        spr.color = Color.white;
+    }
 
 }

@@ -46,4 +46,21 @@ public class EnemyControler : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        float yOffset = 0.4f;
+
+        if (col.gameObject.tag == "Player")
+        {
+            if (transform.position.y + yOffset < col.transform.position.y)
+            {
+                col.gameObject.SendMessage("EnemyJump");
+            }
+            else
+            {
+                col.gameObject.SendMessage("EnemyKnockBack", transform.position.x);
+            }
+        }
+    }
 }

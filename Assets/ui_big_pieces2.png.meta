@@ -150,10 +150,10 @@ TextureImporter:
       name: ui_big_pieces2_1
       rect:
         serializedVersion: 2
-        x: 338
-        y: 513
-        width: 30
-        height: 17
+        x: 341
+        y: 514
+        width: 25
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

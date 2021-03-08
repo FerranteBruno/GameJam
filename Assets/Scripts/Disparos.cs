@@ -54,7 +54,7 @@ public class Disparos : MonoBehaviour
                 ///Debug.Log("level-3" + robot.level);
                 break;
             default:
-                Instantiate(ray_1, firePoint.position, firePoint.rotation);
+                Instantiate(ray_3, firePoint.position, firePoint.rotation);
                 //Debug.Log("level-D" + robot.level);
                 break;
 
