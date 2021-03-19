@@ -18,7 +18,7 @@ public class HurtEnemy : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    /*void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Enemy" )
 
@@ -26,14 +26,14 @@ public class HurtEnemy : MonoBehaviour
             
             col.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
         }
-    }
+    }*/
 
-    /*void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D coli)
     {
 
-        if (col.gameObject.tag == "Enemy")
+        if (coli.gameObject.tag == "Enemy")
         {
-            col.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
+            coli.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
         }
-    }*/
+    }
 }

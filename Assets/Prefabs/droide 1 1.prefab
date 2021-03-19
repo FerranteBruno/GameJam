@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4492181860660249476}
   - component: {fileID: 7383248194112804413}
-  - component: {fileID: 3132346773924190656}
+  - component: {fileID: 7166360837229500932}
   - component: {fileID: 7578841237248127082}
   - component: {fileID: 7578841237248127077}
   - component: {fileID: 1311398517571121316}
   - component: {fileID: 8606392807902369519}
   - component: {fileID: 3828262191507468999}
+  - component: {fileID: 1868892979}
   m_Layer: 0
   m_Name: droide 1 1
   m_TagString: Enemy
@@ -32,10 +33,10 @@ Transform:
   m_GameObject: {fileID: 42988582606015834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.709997, y: -8.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
-  - {fileID: 9142831876244443685}
   - {fileID: 7752752637769896837}
+  - {fileID: 9142831876244443685}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -90,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &3132346773924190656
+--- !u!60 &7166360837229500932
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,8 +100,8 @@ PolygonCollider2D:
   m_GameObject: {fileID: 42988582606015834}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: d82971f025ebf3948b72d418c68e1ec6, type: 2}
-  m_IsTrigger: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42988582606015834}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9a724c0c79abc54eb083e875dcc9309, type: 3}
   m_Name: 
@@ -218,6 +219,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageToGive: 2
   sparks: {fileID: 0}
+--- !u!58 &1868892979
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42988582606015834}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.48437452}
+  serializedVersion: 2
+  m_Radius: 4.37
 --- !u!1 &2481451946620244066
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +247,7 @@ GameObject:
   - component: {fileID: 2750784532960183365}
   m_Layer: 0
   m_Name: footstep-walk-game-sound-royaltyfree
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,7 +264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4492181860660249476}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2750784532960183365
 AudioSource:
@@ -261,7 +278,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 49cbfc1a2600bd54c8142f08a0b165c2,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 427b84c9f436ad94297271d0db97049d, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.907
   m_Pitch: -1.43
   Loop: 0
@@ -355,11 +372,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7752752637769896837}
-  - component: {fileID: 1699527499857119236}
-  - component: {fileID: 8015379702003647772}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,35 +391,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4492181860660249476}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1699527499857119236
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5904370824563671227}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0000038146973, y: 0.48437548}
-  serializedVersion: 2
-  m_Radius: 6.06
---- !u!114 &8015379702003647772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5904370824563671227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9a724c0c79abc54eb083e875dcc9309, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMaxHelth: 15
-  enemyCurrentHealth: 0

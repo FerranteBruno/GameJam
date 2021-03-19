@@ -92,9 +92,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: tok
     m_EventTreshold: 0
-  - m_ConditionMode: 3
-    m_ConditionEvent: 
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5918091560457687495}
   m_Solo: 0

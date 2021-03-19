@@ -12,6 +12,7 @@ public class CameraFollow : MonoBehaviour
     public Vector3 prev;
     public Vector3 prev2;
     public Vector2 minCamPos, maxCamPos;
+    
 
 
     void Start()
@@ -46,8 +47,12 @@ public class CameraFollow : MonoBehaviour
 
         }
 
-        prev = new Vector3(follow.transform.position.x, follow.transform.position.y, follow.transform.position.z);
 
+        if (follow2.GetComponent<PlayerController>().Activo)
+        {
+            prev = new Vector3(follow.transform.position.x, follow.transform.position.y, follow.transform.position.z);
+        }
+
+        
     }
-
 }

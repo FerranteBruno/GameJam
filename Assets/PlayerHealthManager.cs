@@ -8,6 +8,7 @@ public class PlayerHealthManager : MonoBehaviour
     public int playerMaxHealth;
     public int playerCurrentHealth;
     public GameObject BarraVida;
+    public Animator animacion;
     
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class PlayerHealthManager : MonoBehaviour
         BarraVida.SendMessage("TakeDamage", playerCurrentHealth);
         if (playerCurrentHealth <= 0)
         {
-            gameObject.SetActive(false);
+            animacion.SetBool("Muere", true);
         }
     }
 

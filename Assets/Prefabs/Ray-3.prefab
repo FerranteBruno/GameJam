@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5532581989706959699}
   - component: {fileID: 5532581989706959696}
   - component: {fileID: 5532581989706959697}
-  - component: {fileID: 1699469311069399636}
+  - component: {fileID: 3930069673142900964}
   - component: {fileID: 4283863163283024311}
   m_Layer: 0
   m_Name: Ray-3
@@ -93,11 +93,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5532581989706959710}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.2
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 90
---- !u!58 &1699469311069399636
+--- !u!58 &3930069673142900964
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,7 +129,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.5527581, y: 0.12009376}

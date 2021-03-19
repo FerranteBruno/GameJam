@@ -17,7 +17,12 @@ public class PlayerController : MonoBehaviour
     public bool Activo;
     public int level=1;
     public AudioSource walkFx;
+    public AudioSource Jumpy;
+    public AudioSource Jumpy2;
     private SpriteRenderer spr;
+    //camara fx
+    float magSac;
+    public Transform camSac;
 
     public bool getJump { get => Jump; set => Jump = value; }
 
@@ -48,14 +53,16 @@ public class PlayerController : MonoBehaviour
             if (grounded)
             {
                 Jump = true;
+                Jumpy.Play();
                 doubleJump = true;
             }else if (doubleJump)
             {
                 Jump = true;
+                Jumpy2.Play();
                 doubleJump = false;
             }
         }
-        
+
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (Activo == true)
@@ -67,10 +74,10 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Activo = true;
-                rb2d.isKinematic=false;
+                rb2d.isKinematic = false;
                 anim.SetBool("Waiting", false);
             }
-        } 
+        }
 
     }
     void FixedUpdate()
@@ -78,7 +85,7 @@ public class PlayerController : MonoBehaviour
         if (Activo)
         {
             Vector3 fixedVelocity = rb2d.velocity;
-            fixedVelocity.x *= 0.75f;//Simula fuerza de arrastre
+            fixedVelocity.x *= 0.85f;//Simula fuerza de arrastre
 
             if (grounded)//aplica si esta en el suelo
             {
@@ -110,7 +117,27 @@ public class PlayerController : MonoBehaviour
                 Jump = false;
             }
         }
-        Debug.Log(rb2d.velocity.x);
+        else
+        {
+            Vector3 fixedVelocity = rb2d.velocity;
+            fixedVelocity.x *= 0f;
+            if (grounded)//aplica si esta en el suelo
+            {
+                rb2d.velocity = fixedVelocity;
+            }
+        }
+
+        ///rotacion de camara para daño
+        if (magSac > 0.01f)
+        {
+            camSac.rotation = Quaternion.Euler(
+                Random.Range(-magSac, magSac),
+                Random.Range(-magSac, magSac),
+                Random.Range(-magSac, magSac));
+            magSac *= 0.9f;
+        }
+
+        //Debug.Log(rb2d.velocity.x);
     }
     public void EnemyJump(float enemyPosX)
     {
@@ -123,11 +150,13 @@ public class PlayerController : MonoBehaviour
 
     public void EnemyKnockBack(float enemyPosX)
     {
-        Jump = true;
+        ///Jump = true;
 
         float side = Mathf.Sign(enemyPosX - transform.position.x);
         rb2d.AddForce(Vector2.left * side * jumpPower, ForceMode2D.Impulse);
-
+        rb2d.AddForce(Vector2.up * jumpPower/2.5f, ForceMode2D.Impulse);
+        // rb2d.AddForce(Vector2.left *  jumpPower, ForceMode2D.Force);
+        sacudirCamara(0.5f);//sacudon 
         movement = false;
         Invoke("EnableMovement", 0.5f);
         spr.color = Color.red;
@@ -137,6 +166,10 @@ public class PlayerController : MonoBehaviour
     {
         movement = true;
         spr.color = Color.white;
+    }
+    void sacudirCamara(float MaxSac)
+    {
+        magSac = MaxSac;
     }
 
 }

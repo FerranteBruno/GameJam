@@ -17,7 +17,18 @@ public class Ray : MonoBehaviour
     void FixedUpdate()
     {
         MyRb.velocity = transform.right * speed;
-        Destroy(gameObject, 5f);
+
+        Destroy(gameObject, 1.75f);
+    }
+
+    /*void OnTriggerEnter2D(Collider2D col)
+    {
+        Destroy(gameObject, 0.5f);
+    }*/
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Destroy(gameObject, 0.03f);
     }
 
 }

@@ -11,6 +11,7 @@ public class PowerUpLife : MonoBehaviour
     public AudioSource hpFx;
     public int hpRegen = 20;
     public int hpRef;
+    public bool activo;
 
 
     void Start()
@@ -26,23 +27,29 @@ public class PowerUpLife : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        hpMax = col.gameObject.GetComponent<PlayerHealthManager>().playerMaxHealth;
-        hpRef = col.gameObject.GetComponent<PlayerHealthManager>().playerCurrentHealth += hpRegen;
 
-        if(hpRef >= hpMax)
+      //  hpMax = col.GetComponent<PlayerHealthManager>().playerMaxHealth;
+        hpMax = col.GetComponent<PlayerHealthManager>().playerMaxHealth;
+        hpRef = col.GetComponent<PlayerHealthManager>().playerCurrentHealth += hpRegen;
+
+        if (!activo)
         {
-            col.gameObject.GetComponent<PlayerHealthManager>().playerCurrentHealth = hpMax;
+            if (hpRef >= hpMax)
+            {
+                col.GetComponent<PlayerHealthManager>().playerCurrentHealth = hpMax;
+                hpFx.Play();
+                activo = true;
+            }
+
+            else
+            {
+                col.GetComponent<PlayerHealthManager>().playerCurrentHealth += hpRegen;
+                hpFx.Play();
+
+
+            }
         }
-
-        else
-        {
-            col.gameObject.GetComponent<PlayerHealthManager>().playerCurrentHealth += hpRegen;
-        }
-
-
-        hpFx.Play();
-
-        Destroy(gameObject);
+        Destroy(gameObject,0.5f);
 
     }
 

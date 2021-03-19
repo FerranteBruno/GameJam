@@ -46,11 +46,11 @@ public class EnemyChaserController : MonoBehaviour
                 perseguir = false;
             }
 
-            if (value.x < 0.1f)
+            if (value.x < 1.5f)
             {
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
             }
-            if (value.x > 0.1f)
+            if (value.x > 1.5f)
             {
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);
             }
@@ -83,7 +83,7 @@ public class EnemyChaserController : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionStay2D(Collision2D col)
     {
         float yOffset = 0.4f;
 
@@ -91,7 +91,8 @@ public class EnemyChaserController : MonoBehaviour
         {
             if (transform.position.y + yOffset < col.transform.position.y)
             {
-                col.gameObject.SendMessage("EnemyJump");
+                col.gameObject.SendMessage("EnemyKnockBack", transform.position.x);
+
             }
             else
             {

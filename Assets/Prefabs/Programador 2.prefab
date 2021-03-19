@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 7404660981131108906}
   - component: {fileID: 7404660981131108909}
   - component: {fileID: 85702995244011631}
+  - component: {fileID: 7280151633448066397}
   m_Layer: 0
   m_Name: Programador 2
   m_TagString: Programer
@@ -296,10 +297,28 @@ MonoBehaviour:
   speed: 1250
   maxSpeed: 20
   grounded: 0
-  jumpPower: 120
+  telep: 0
+  jumpPower: 160
   Ataque: 0
   Activo: 0
   Vape: {fileID: 85702995604059204}
+  pr: {fileID: 7404660981131108911}
+  pj: {fileID: 0}
+--- !u!114 &7280151633448066397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404660981131108911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eac0b207a58caf4498a67153ae55c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj1: {fileID: 7404660981131108911}
+  obj2: {fileID: 0}
+  distanceType: 1
 --- !u!1 &7404660981810325698
 GameObject:
   m_ObjectHideFlags: 0

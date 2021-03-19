@@ -31,7 +31,7 @@ public class EnemyShielderController : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D col){
+    void OnTriggerStay2D(Collider2D col){
         if(col.gameObject.tag == "Player")
         {
             //Debug.Log("porquenofuinciona?");
@@ -40,10 +40,12 @@ public class EnemyShielderController : MonoBehaviour
             float yOffset = 0.4f;
             if(transform.position.y + yOffset < col.transform.position.y)
             {
-                col.SendMessage("EnemyJump");
+                //col.SendMessage("EnemyJump");
+                col.SendMessage("EnemyKnockBack", transform.position.x);
             }
             else
             {
+                //col.SendMessage("EnemyJump");
                 col.SendMessage("EnemyKnockBack",transform.position.x);
             }
 

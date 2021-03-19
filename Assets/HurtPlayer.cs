@@ -8,6 +8,7 @@ public class HurtPlayer : MonoBehaviour
 
     public int damageToGive;
     public AudioSource sparks;
+    public Collider2D col;
 
 
     void Start()

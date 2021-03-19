@@ -7,13 +7,20 @@ public class ProgramController : MonoBehaviour
     public float speed = 2f;
     public float maxSpeed = 5f;
     private Rigidbody2D rb2d;
-    private Animator anim;
+    public Animator anim;
     public bool grounded;
+    public bool telep;
     public float jumpPower = 20f;
     private bool Jump;
     public bool Ataque;
     public bool Activo;
+    
     public AudioSource Vape;
+
+    //el programador
+    public GameObject pr;
+    //teleport
+    public GameObject pj;
 
     // Start is called before the first frame update
     void Start()
@@ -29,21 +36,39 @@ public class ProgramController : MonoBehaviour
         anim.SetFloat("Velocidad", Mathf.Abs(rb2d.velocity.x));
         anim.SetBool("Ground", grounded);
 
+        
+
         if (Input.GetKeyDown(KeyCode.UpArrow) && grounded == true)
         {
             Jump = true;
         }
-                
+
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (Activo == true)
             {
+
+                
+
                 Vape.Play();
                 Activo = false;
                 anim.SetBool("Coding", true);
+               // }
             }
+
             else
             {
+                Vector2 vec = new Vector2(20, 0);
+                if (pr.GetComponent<Distances>().CalculateDistancesXYPlane() > vec.x)
+                {
+                    transform.SetPositionAndRotation(pj.transform.position, Quaternion.identity );
+                    anim.SetBool("Teleport", true);
+
+
+
+                }
+
+                anim.SetBool("Teleport", false);
                 Activo = true;
                 anim.SetBool("Coding", false);
             }
@@ -85,7 +110,7 @@ public class ProgramController : MonoBehaviour
                 Jump = false;
             }
         }
-        Debug.Log(rb2d.velocity.x);
+        //Debug.Log(rb2d.velocity.x);
     }
     /*void OnBecameInvisible()
     {

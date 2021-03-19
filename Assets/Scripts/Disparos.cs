@@ -8,9 +8,11 @@ public class Disparos : MonoBehaviour
     public GameObject ray_1;
     public GameObject ray_2;
     public GameObject ray_3;
-
+    public AudioSource Blaster;
     private PlayerController robot;
     private Animator anim;
+    public Transform refFP;
+    public GameObject particulasArma;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +27,10 @@ public class Disparos : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && robot.Ataque == false && robot.Activo)
         {
             robot.Ataque = true;
-
+            Blaster.Play();
             anim.SetBool("Atak", true);
             Shoot();
+            
         }
         else if (!Input.GetKeyDown(KeyCode.Space))
         {
@@ -38,23 +41,34 @@ public class Disparos : MonoBehaviour
     }
     void Shoot()
     {
+
+        
         Debug.Log("level-Into" + robot.level);
         switch (robot.level)
         {
             case 1:
+
                 Instantiate(ray_1, firePoint.position, firePoint.rotation);
+                Instantiate(particulasArma, refFP.position, Quaternion.identity);
+
                 //Debug.Log("level-1" + robot.level);
                 break;
             case 2:
                 Instantiate(ray_2, firePoint.position, firePoint.rotation);
+                Instantiate(particulasArma, refFP.position, Quaternion.identity);
                 //Debug.Log("level-3" + robot.level);
                 break;
             case 3:
                 Instantiate(ray_3, firePoint.position, firePoint.rotation);
+                Instantiate(particulasArma, refFP.position, Quaternion.identity);
+
                 ///Debug.Log("level-3" + robot.level);
+                ///
                 break;
             default:
                 Instantiate(ray_3, firePoint.position, firePoint.rotation);
+                Instantiate(particulasArma, refFP.position, Quaternion.identity);
+
                 //Debug.Log("level-D" + robot.level);
                 break;
 

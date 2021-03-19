@@ -6,6 +6,8 @@ public class Include : MonoBehaviour
 {
     public PlayerController charUP;
     public Animator ani;
+    public AudioSource pUp;
+    public bool activo;
 
 
 
@@ -14,6 +16,7 @@ public class Include : MonoBehaviour
     {
         //charUP = /*GetComponent<PlayerController>();*/
         ani = GetComponent<Animator>();
+        activo = false;
     }
 
     // Update is called once per frame
@@ -29,24 +32,30 @@ public class Include : MonoBehaviour
 
         Debug.Log("LE PONGO UN LAAAABEEELL "+charUP.level);
 
-        if (col.gameObject.tag == "Player")
+        if (!activo)
         {
-
-            if (charUP.level < 4)
+            if (col.gameObject.tag == "Player")
             {
-                charUP.level++;
-            }
-            else
-            {
-                charUP.level = 3;
-            }
 
+                if (charUP.level < 4)
+                {
+                    charUP.level++;
+                    pUp.Play();
+                    activo = true;
+                }
+                else
+                {
+                    charUP.level = 3;
+                    pUp.Play();
+                    activo = true;
+                }
+
+            }
         }
-
         
 
 
-        Destroy(gameObject);
+        Destroy(gameObject,1.2f);
 
 
 

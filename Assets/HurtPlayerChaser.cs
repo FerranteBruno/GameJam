@@ -39,8 +39,7 @@ public class HurtPlayerChaser : MonoBehaviour
 
             sparks.Play();
         }
-    
+
 
     }
-  
 }
